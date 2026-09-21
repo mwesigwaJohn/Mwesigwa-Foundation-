@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mwesigwa Foundation | Creating Hope, Changing Lives</title>
+
+  <meta name="description" content="Mwesigwa Foundation is committed to creating hope, supporting children and families, and building stronger communities.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      line-height: 1.6;
+      background: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    /* HEADER */
+    header {
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .nav {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #087443;
+    }
+
+    .logo span {
+      color: #d89b18;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    nav a:hover {
+      color: #087443;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(rgba(0,60,35,0.72), rgba(0,60,35,0.72)),
+        url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      padding: 80px 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #f1c453;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 650px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 6px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #d89b18;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #b87e0b;
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: white;
+      color: #087443;
+    }
+
+    .btn-light:hover {
+      background: #f1f1f1;
+      transform: translateY(-2px);
+    }
+
+    /* GENERAL */
+    section {
+      padding: 85px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title small {
+      color: #087443;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin: 10px 0;
+      color: #123c2b;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: auto;
+      color: #666;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .about-text h2 {
+      font-size: 38px;
+      color: #123c2b;
+      margin-bottom: 18px;
+    }
+
+    .about-text p {
+      color: #555;
+      margin-bottom: 18px;
+    }
+
+    /* MISSION VISION */
+    .green-section {
+      background: #f1f7f4;
+    }
+
+    .mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+    }
+
+    .card-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #e4f2eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: #123c2b;
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    /* VALUES */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .value {
+      text-align: center;
+      padding: 28px 20px;
+      border: 1px solid #eee;
+      border-radius: 10px;
+    }
+
+    .value h3 {
+      margin: 12px 0 7px;
+      color: #123c2b;
+    }
+
+    .value p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* PROGRAMS */
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .program {
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+
+    .program img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .program-content {
+      padding: 25px;
+    }
+
+    .program h3 {
+      color: #123c2b;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .program p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* IMPACT */
+    .impact {
+      background: #087443;
+      color: white;
+    }
+
+    .impact .section-title h2,
+    .impact .section-title p,
+    .impact .section-title small {
+      color: white;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .impact-number {
+      font-size: 42px;
+      font-weight: 800;
+      color: #f1c453;
+    }
+
+    .impact p {
+      opacity: 0.9;
+    }
+
+    /* GET INVOLVED */
+    .involve-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .involve {
+      padding: 35px;
+      border-radius: 12px;
+      background: #f7f7f7;
+      text-align: center;
+    }
+
+    .involve h3 {
+      color: #123c2b;
+      margin: 12px 0;
+    }
+
+    /* DONATE */
+    .donate {
+      background:
+        linear-gradient(rgba(8,116,67,0.9), rgba(8,116,67,0.9)),
+        url("https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .donate h2 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .donate p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      font-size: 18px;
+    }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* TEAM */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .team-card {
+      text-align: center;
+      border-radius: 12px;
+      padding: 25px;
+      background: #f7f7f7;
+    }
+
+    .team-card .person {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      background: #dfe9e3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 45px;
+    }
+
+    .team-card h3 {
+      color: #123c2b;
+    }
+
+    .team-card p {
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* NEWS */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .news-card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .news-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .news-content {
+      padding: 22px;
+    }
+
+    .news-content small {
+      color: #087443;
+      font-weight: bold;
+    }
+
+    .news-content h3 {
+      margin: 8px 0;
+      color: #123c2b;
+    }
+
+    .news-content p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: #f1f7f4;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+    }
+
+    .contact-info h2 {
+      color: #123c2b;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .contact-item {
+      margin: 20px 0;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: #123c2b;
+      margin-bottom: 4px;
+    }
+
+    .contact-item a {
+      color: #087443;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font: inherit;
+    }
+
+    textarea {
+      height: 140px;
+      resize: vertical;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #102b20;
+      color: white;
+      padding: 55px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 45px;
+      margin-bottom: 35px;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      color: #c7d2cc;
+    }
+
+    footer a {
+      display: block;
+      color: #c7d2cc;
+      margin: 8px 0;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 20px;
+      text-align: center;
+      color: #b8c5be;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+      nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .about-grid,
+      .mv-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .program-grid,
+      .news-grid,
+      .team-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .values-grid,
+      .impact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      section {
+        padding: 60px 0;
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      .program-grid,
+      .news-grid,
+      .team-grid,
+      .values-grid,
+      .impact-grid,
+      .involve-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image img {
+        height: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <a href="#home" class="logo">
+        Mwesigwa <span>Foundation</span>
+      </a>
+
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+      <nav id="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#impact">Impact</a>
+        <a href="#get-involved">Get Involved</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Creating <span>Hope.</span><br>Changing Lives.</h1>
+
+        <p>
+          Mwesigwa Foundation is committed to creating opportunities,
+          supporting children and families, and contributing to stronger,
+          more hopeful communities.
+        </p>
+
+        <div class="buttons">
+          <a href="#about" class="btn btn-primary">Learn More</a>
+          <a href="#get-involved" class="btn btn-light">Get Involved</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=85" alt="Children">
+        </div>
+
+        <div class="about-text">
+          <h2>About Mwesigwa Foundation</h2>
+
+          <p>
+            Mwesigwa Foundation is a community-focused organization
+            committed to creating hope and supporting people who need
+            opportunities to build better lives.
+          </p>
+
+          <p>
+            We believe that every child deserves a chance to learn,
+            grow, dream and build a brighter future.
+          </p>
+
+          <p>
+            Through partnerships, community programs, volunteers and
+            supporters, we aim to make a meaningful and lasting difference.
+          </p>
+
+          <a href="#contact" class="btn btn-primary">Connect With Us</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section class="green-section">
+    <div class="container">
+
+      <div class="section-title">
+        <small>What Drives Us</small>
+        <h2>Mission & Vision</h2>
+        <p>
+          Our purpose guides everything we do.
+        </p>
+      </div>
+
+      <div class="mv-grid">
+
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <h3>Our Mission</h3>
+          <p>
+            To create hope and opportunities for children, families and
+            communities through compassionate support, education,
+            empowerment and sustainable community initiatives.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">👁️</div>
+          <h3>Our Vision</h3>
+          <p>
+            A future where every child and every community has the
+            opportunity, support and confidence to thrive and reach
+            their full potential.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <small>Our Foundation</small>
+        <h2>Our Core Values</h2>
+        <p>
+          The principles that guide our work and relationships.
+        </p>
+      </div>
+
+      <div class="values-grid">
+
+        <div class="value">
+          <div class="card-icon">❤️</div>
+          <h3>Compassion</h3>
+          <p>We care about people and treat everyone with dignity.</p>
+        </div>
+
+        <div class="value">
+          <div class="card-icon">🤝</div>
+          <h3>Integrity</h3>
+          <p>We believe in honesty, accountability and responsible action.</p>
+        </div>
+
+        <div class="value">
+          <div class="card-icon">🌱</div>
+          <h3>Empowerment</h3>
+          <p>We help people develop opportunities for a better future.</p>
+        </div>
+
+        <div class="value">
+          <div class="card-icon">🌍</div>
+          <h3>Community</h3>
+          <p>We believe positive change grows through people working together.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="green-section" id="programs">
+    <div class="container">
+
+      <div class="section-title">
+        <small>Our Work</small>
+        <h2>What We Do</h2>
+        <p>
+          Our programs are designed to support people and strengthen communities.
+        </p>
+      </div>
+
+      <div class="program-grid">
+
+        <div class="program">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=85" alt="Education">
+          <div class="program-content">
+            <h3>Education Support</h3>
+            <p>
+              Supporting access to learning and opportunities that can
+              help children develop their potential.
+            </p>
+          </div>
+        </div>
+
+        <div class="program">
+          <img src="https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&fit=crop&w=900&q=85" alt="Community">
+          <div class="program-content">
+            <h3>Community Support</h3>
+            <p>
+              Working with communities to identify needs and encourage
+              practical solutions.
+            </p>
+          </div>
+        </div>
+
+        <div class="program">
+          <img src="https://images.unsplash.com/photo-1602030028438-4cf153cbae9e?auto=format&fit=crop&w=900&q=85" alt="Children">
+          <div class="program-content">
+            <h3>Children & Family Support</h3>
+            <p>
+              Helping create safer and more supportive environments for
+              children and families.
+            </p>
+          </div>
+        </div>
+
+        <div class="program">
+          <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=900&q=85" alt="Volunteer">
+          <div class="program-content">
+            <h3>Volunteerism</h3>
+            <p>
+              Connecting people who want to give their time, skills and
+              energy to meaningful community work.
+            </p>
+          </div>
+        </div>
+
+        <div class="program">
+          <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=900&q=85" alt="Helping">
+          <div class="program-content">
+            <h3>Basic Needs</h3>
+            <p>
+              Supporting vulnerable people with essential needs when
+              resources and partnerships make assistance possible.
+            </p>
+          </div>
+        </div>
+
+        <div class="program">
+          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=85" alt="Partnership">
+          <div class="program-content">
+            <h3>Partnerships</h3>
+            <p>
+              Building relationships with individuals, organizations and
+              communities to expand positive impact.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="impact" id="impact">
+    <div class="container">
+
+      <div class="section-title">
+        <small>Our Impact</small>
+        <h2>Growing Together</h2>
+        <p>
+          As our work grows, this section will showcase verified
+          achievements and measurable impact.
+        </p>
+      </div>
+
+      <div class="impact-grid">
+
+        <div>
+          <div class="impact-number">—</div>
+          <p>People Reached</p>
+        </div>
+
+        <div>
+          <div class="impact-number">—</div>
+          <p>Children Supported</p>
+        </div>
+
+        <div>
+          <div class="impact-number">—</div>
+          <p>Community Projects</p>
+        </div>
+
+        <div>
+          <div class="impact-number">—</div>
+          <p>Volunteers</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GET INVOLVED -->
+  <section id="get-involved">
+    <div class="container">
+
+      <div class="section-title">
+        <small>Be Part of the Change</small>
+        <h2>Get Involved</h2>
+        <p>
+          There are many ways to support the mission of Mwesigwa Foundation.
+        </p>
+      </div>
+
+      <div class="involve-grid">
+
+        <div class="involve">
+          <div class="card-icon" style="margin:auto;">🤝</div>
+          <h3>Volunteer</h3>
+          <p>
+            Give your time, skills and energy to support our work.
+          </p>
+        </div>
+
+        <div class="involve">
+          <div class="card-icon" style="margin:auto;">💝</div>
+          <h3>Donate</h3>
+          <p>
+            Your contribution can help us create opportunities and support
+            community initiatives.
+          </p>
+        </div>
+
+        <div class="involve">
+          <div class="card-icon" style="margin:auto;">🌍</div>
+          <h3>Partner With Us</h3>
+          <p>
+            Organizations and individuals can work with us to expand
+            meaningful community impact.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE -->
+  <section class="donate" id="donate">
+    <div class="container">
+
+      <h2>Help Us Create Hope</h2>
+
+      <p>
+        Every contribution, partnership and act of service can help
+        create opportunities for people and communities.
+      </p>
+
+      <a href="tel:0759854917" class="btn btn-primary">
+        Contact Us to Support
+      </a>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <small>Our Stories</small>
+        <h2>Gallery</h2>
+        <p>
+          Photos from our future activities, projects and community work
+          will appear here.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <img src="https://images.unsplash.com/photo-1494386346843-e12284507169?auto=format&fit=crop&w=900&q=85" alt="Community">
+        <img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=900&q=85" alt="Children">
+        <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=900&q=85" alt="Community work">
+        <img src="https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=900&q=85" alt="Children">
+        <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=900&q=85" alt="Child">
+        <img src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=900&q=85" alt="Community">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="green-section">
+    <div class="container">
+
+      <div class="section-title">
+        <small>Leadership</small>
+        <h2>Our Team</h2>
+        <p>
+          Meet the people helping build the vision of Mwesigwa Foundation.
+        </p>
+      </div>
+
+      <div class="team-grid">
+
+        <div class="team-card">
+          <div class="person">👤</div>
+          <h3>Mwesigwa John</h3>
+          <p>Founder</p>
+        </div>
+
+        <div class="team-card">
+          <div class="person">👤</div>
+          <h3>Our Team</h3>
+          <p>Coming Soon</p>
+        </div>
+
+        <div class="team-card">
+          <div class="person">👤</div>
+          <h3>Our Volunteers</h3>
+          <p>Growing Together</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <small>Latest Updates</small>
+        <h2>News & Stories</h2>
+        <p>
+          Follow our journey as Mwesigwa Foundation grows.
+        </p>
+      </div>
+
+      <div class="news-grid">
+
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=900&q=85" alt="Foundation">
+          <div class="news-content">
+            <small>FOUNDATION UPDATE</small>
+            <h3>Building a Foundation of Hope</h3>
+            <p>
+              Follow the journey of Mwesigwa Foundation as we develop
+              programs and partnerships.
+            </p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1509099836639-18ba02c0d754?auto=format&fit=crop&w=900&q=85" alt="Education">
+          <div class="news-content">
+            <small>COMMUNITY</small>
+            <h3>Supporting Future Generations</h3>
+            <p>
+              Learn more about our commitment to children and education.
+            </p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=85" alt="Partnership">
+          <div class="news-content">
+            <small>PARTNERSHIPS</small>
+            <h3>Together We Can Make a Difference</h3>
+            <p>
+              Partnerships help communities turn ideas into meaningful action.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <h2>Let's Connect</h2>
+
+          <p>
+            Whether you want to support our work, volunteer, partner with
+            us or simply learn more, we would love to hear from you.
+          </p>
+
+          <div class="contact-item">
+            <strong>📞 Phone</strong>
+            <a href="tel:0759854917">0759854917</a>
+          </div>
+
+          <div class="contact-item">
+            <strong>📧 Email</strong>
+            <a href="mailto:Mjofficial0759@gmail.com">
+              Mjofficial0759@gmail.com
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <strong>📸 Instagram</strong>
+            <a href="https://www.instagram.com/" target="_blank">
+              Mwesigwa Foundation
+            </a>
+          </div>
+        </div>
+
+        <form onsubmit="sendMessage(event)">
+          <h3 style="color:#123c2b; margin-bottom:20px;">
+            Send Us a Message
+          </h3>
+
+          <input type="text" id="name" placeholder="Your Name" required>
+
+          <input type="email" id="email" placeholder="Your Email" required>
+
+          <input type="text" id="subject" placeholder="Subject" required>
+
+          <textarea id="message" placeholder="Your Message" required></textarea>
+
+          <button type="submit" class="btn btn-primary">
+            Send Message
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <h3>Mwesigwa Foundation</h3>
+          <p>
+            Creating hope, empowering people and building stronger
+            communities.
+          </p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#programs">Programs</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <a href="tel:0759854917">0759854917</a>
+          <a href="mailto:Mjofficial0759@gmail.com">Mjofficial0759@gmail.com</a>
+          <a href="https://www.instagram.com/" target="_blank">
+            Instagram
+          </a>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 Mwesigwa Foundation. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script>
+
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("active");
+    }
+
+    function sendMessage(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
+
+      const body =
+        "Name: " + name +
+        "%0AEmail: " + email +
+        "%0A%0A" + message;
+
+      window.location.href =
+        "mailto:Mjofficial0759@gmail.com?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" + body;
+    }
+
+  </script>
+
+</body>
+</html>
